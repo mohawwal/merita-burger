@@ -1,0 +1,17 @@
+<header>
+  <div class="container">
+    <a routerLink="" class="logo">MERITA</a>
+    <nav>
+      <ul>
+        <li>
+          <a routerLink="/login" class="login">Orders</a>
+        </li>
+        <li>
+          <a routerLink="/cart-page"
+            >Cart <span *ngIf="cartQuantity">{{ cartQuantity }}</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

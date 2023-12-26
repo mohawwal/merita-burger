@@ -1,0 +1,154 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 1rem;
+  margin-top: 0.5rem;
+  flex-direction: column;
+  padding: 5%;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  flex: 3 0;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 2px solid wheat;
+  border-radius: 20px;
+  margin-top: 1rem;
+}
+
+li img {
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+}
+
+li div {
+  padding: 1rem;
+}
+
+li select {
+  width: 3rem;
+  outline: none;
+  font-size: 1.1rem;
+  font-family: 100;
+}
+
+li .remove-button {
+  border-radius: 1rem;
+  border: none;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #a52a2a;
+  color: wheat;
+}
+
+li .remove-button:hover,
+li .remove-button:focus {
+  cursor: pointer;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.checkout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: wheat;
+  border-radius: 20px;
+  padding: 4%;
+}
+
+.total-price::before {
+  content: "TOTAL: ";
+}
+
+.cartItemPrice {
+  font-weight: bold;
+}
+
+.foods-count,
+.total-price {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.foods-count::before {
+  content: "ITEM NO: ";
+}
+
+li a {
+  color: #a52a2a;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+a {
+  cursor: pointer;
+}
+
+li div select {
+  padding: 8px;
+  border: #a52a2a;
+  border-radius: 10px;
+}
+
+select option {
+  background-color: #a52a2a;
+  color: wheat;
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .checkout {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+  li div:not(:first-child) {
+    flex-basis: 10%;
+  }
+
+  .checkout a::before {
+    content: "Proceed to ";
+  }
+
+  a {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .checkout {
+    width: 60%;
+    font-size: 1.2rem;
+    margin: 5px;
+  }
+}

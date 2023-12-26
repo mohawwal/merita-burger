@@ -1,0 +1,28 @@
+<app-search></app-search>
+<app-not-found
+  [visible]="!foods || !foods.length"
+  resetLinkText="Go To Home Page"
+  routerLink="Burger Not Found"
+></app-not-found>
+<ul *ngIf="foods">
+  <li *ngFor="let food of foods">
+    <a [routerLink]="'/food/' + food.id">
+      <img [src]="food.imageUrl" [alt]="food.name" />
+      <div class="details">
+        <div class="content">
+          <div class="name bold">{{ food.name }}</div>
+        </div>
+        <span class="favorite {{ food.favorite ? '' : 'not' }}"> ❤ </span>
+        <div class="product-item-footer">
+          <div class="origins">
+            <span *ngFor="let origins of food.origins">{{ origins }}</span>
+          </div>
+          <div class="cook-time"><span>🕒</span>{{ food.cookTime }} mins</div>
+        </div>
+        <div class="price bold">
+          <span>{{ food.price | currency }}</span>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,9 @@
+<div>
+  <input
+    type="text"
+    placeholder="Search Burger"
+    #s
+    (input)="search(s.value)"
+    [value]="searchTerm"
+  />
+</div>
